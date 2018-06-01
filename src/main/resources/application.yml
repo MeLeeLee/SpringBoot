@@ -25,7 +25,6 @@ spring:
         maxOpenPreparedStatements: 20
 mybatis:
   mapper-locations: classpath:mapping/*.xml
-  type-aliases-package: com.winter.model
 
 #pagehelper分页插件
 pagehelper:
@@ -33,4 +32,4 @@ pagehelper:
     reasonable: true
     supportMethodsArguments: true
     params: count=countSql
-cronExpression: 0/1 * * * * ?
+cronExpression: 45 56 15 * * ? #每天15:56:45秒运行

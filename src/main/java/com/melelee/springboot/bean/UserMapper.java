@@ -1,15 +1,13 @@
-package com.example.demo.DAO;
-
-import com.example.demo.DTO.User;
+package com.melelee.springboot.bean;
 
 public interface UserMapper {
-    int deleteByPrimaryKey(Integer userId);
+    int deleteByPrimaryKey(Long id);
 
     int insert(User record);
 
     int insertSelective(User record);
 
-    User selectByPrimaryKey(Integer userId);
+    User selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(User record);
 
