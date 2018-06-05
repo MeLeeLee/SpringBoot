@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.melelee.springboot.bean.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.melelee.springboot.bean.User" >
+<mapper namespace="com.melelee.springboot.bean.mybatis.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.melelee.springboot.bean.mybatis.User" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="email" property="email" jdbcType="VARCHAR" />
     <result column="nick_name" property="nickName" jdbcType="VARCHAR" />
@@ -22,7 +22,7 @@
     delete from user
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.melelee.springboot.bean.User" >
+  <insert id="insert" parameterType="com.melelee.springboot.bean.mybatis.User" >
     insert into user (id, email, nick_name, 
       pass_word, reg_time, user_name
       )
@@ -30,7 +30,7 @@
       #{passWord,jdbcType=VARCHAR}, #{regTime,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.melelee.springboot.bean.User" >
+  <insert id="insertSelective" parameterType="com.melelee.springboot.bean.mybatis.User" >
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -73,7 +73,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.melelee.springboot.bean.User" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.melelee.springboot.bean.mybatis.User" >
     update user
     <set >
       <if test="email != null" >
@@ -94,7 +94,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.melelee.springboot.bean.User" >
+  <update id="updateByPrimaryKey" parameterType="com.melelee.springboot.bean.mybatis.User" >
     update user
     set email = #{email,jdbcType=VARCHAR},
       nick_name = #{nickName,jdbcType=VARCHAR},

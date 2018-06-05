@@ -1,7 +1,7 @@
 package com.melelee.springboot.service;
 
-import com.melelee.springboot.bean.UserMapper;
-import com.melelee.springboot.bean.User;
+import com.melelee.springboot.bean.mybatis.UserMapper;
+import com.melelee.springboot.bean.mybatis.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,10 +1,9 @@
 package com.melelee.springboot.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.melelee.springboot.domain.User;
-import com.melelee.springboot.domain.UserRepository;
+import com.melelee.springboot.bean.jpa.User;
+import com.melelee.springboot.bean.jpa.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -17,8 +16,6 @@ import java.util.Date;
  */
 @RestController
 public class RestfulController {
-	@Value("${name}")
-	private String name;
 
 	@Autowired
 	private UserRepository userRepository;

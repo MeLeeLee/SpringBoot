@@ -4,7 +4,7 @@ server:
 spring:
     datasource:
         name: test
-        url: jdbc:mysql://127.0.0.1:3306/test
+        url: jdbc:mysql://10.1.138.12:3306/uap?useUnicode=true&characterEncoding=UTF-8
         username: root
         password: iflytek!
         # 使用druid数据源
@@ -32,4 +32,4 @@ pagehelper:
     reasonable: true
     supportMethodsArguments: true
     params: count=countSql
-cronExpression: 45 56 15 * * ? #每天15:56:45秒运行
+cronExpression: 0/10 * * * * ? #每天15:56:45秒运行

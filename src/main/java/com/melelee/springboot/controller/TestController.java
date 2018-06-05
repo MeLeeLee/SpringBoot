@@ -1,6 +1,6 @@
 package com.melelee.springboot.controller;
 
-import com.melelee.springboot.bean.User;
+import com.melelee.springboot.bean.mybatis.User;
 import com.melelee.springboot.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
