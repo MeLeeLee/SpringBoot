@@ -62,9 +62,8 @@ public class RestfulController {
 	 * @return the string
 	 */
 	@RequestMapping(value = "/users/{id}",method = RequestMethod.DELETE)
-	public String deleteUser(@PathVariable long id) {
+	public void deleteUser(@PathVariable long id) {
 		userRepository.delete(id);
-		return JSON.toJSONString(null);
 	}
 }
 

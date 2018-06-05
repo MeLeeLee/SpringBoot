@@ -8,14 +8,7 @@ spring:
         username: root
         password: iflytek!
         driver-class-name: com.mysql.jdbc.Driver
-mybatis:
-  mapper-locations: classpath:mapping/*.xml
-
-#pagehelper分页插件
-pagehelper:
-    helperDialect: mysql
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql
-#cronExpression: 0/10 * * * * ? #每天15:56:45秒运行
-cronExpression: 45 56 15 * * ?  #每天15:56:45秒运行
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true

@@ -5,6 +5,15 @@
     <id column="id" property="id" jdbcType="CHAR" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="code" property="code" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="province_code" property="provinceCode" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+    <result column="district" property="district" jdbcType="VARCHAR" />
+    <result column="district_code" property="districtCode" jdbcType="VARCHAR" />
+    <result column="short_name" property="shortName" jdbcType="VARCHAR" />
+    <result column="org_type" property="orgType" jdbcType="VARCHAR" />
+    <result column="org_type_code" property="orgTypeCode" jdbcType="VARCHAR" />
     <result column="higher_org" property="higherOrg" jdbcType="CHAR" />
     <result column="higher_name" property="higherName" jdbcType="VARCHAR" />
     <result column="level" property="level" jdbcType="INTEGER" />
@@ -15,8 +24,9 @@
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, name, code, higher_org, higher_name, level, status, sort, remark, create_time, 
-    update_time
+    id, name, code, province, province_code, city, city_code, district, district_code, 
+    short_name, org_type, org_type_code, higher_org, higher_name, level, status, sort, 
+    remark, create_time, update_time
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
@@ -30,10 +40,16 @@
   </delete>
   <insert id="insert" parameterType="com.melelee.springboot.bean.Organization" >
     insert into t_uap_organization (id, name, code, 
+      province, province_code, city, 
+      city_code, district, district_code, 
+      short_name, org_type, org_type_code, 
       higher_org, higher_name, level, 
       status, sort, remark, 
       create_time, update_time)
     values (#{id,jdbcType=CHAR}, #{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR}, 
+      #{province,jdbcType=VARCHAR}, #{provinceCode,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, 
+      #{cityCode,jdbcType=VARCHAR}, #{district,jdbcType=VARCHAR}, #{districtCode,jdbcType=VARCHAR}, 
+      #{shortName,jdbcType=VARCHAR}, #{orgType,jdbcType=VARCHAR}, #{orgTypeCode,jdbcType=VARCHAR}, 
       #{higherOrg,jdbcType=CHAR}, #{higherName,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, 
       #{status,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, 
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
@@ -49,6 +65,33 @@
       </if>
       <if test="code != null" >
         code,
+      </if>
+      <if test="province != null" >
+        province,
+      </if>
+      <if test="provinceCode != null" >
+        province_code,
+      </if>
+      <if test="city != null" >
+        city,
+      </if>
+      <if test="cityCode != null" >
+        city_code,
+      </if>
+      <if test="district != null" >
+        district,
+      </if>
+      <if test="districtCode != null" >
+        district_code,
+      </if>
+      <if test="shortName != null" >
+        short_name,
+      </if>
+      <if test="orgType != null" >
+        org_type,
+      </if>
+      <if test="orgTypeCode != null" >
+        org_type_code,
       </if>
       <if test="higherOrg != null" >
         higher_org,
@@ -85,6 +128,33 @@
       <if test="code != null" >
         #{code,jdbcType=VARCHAR},
       </if>
+      <if test="province != null" >
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCode != null" >
+        #{provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="district != null" >
+        #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="districtCode != null" >
+        #{districtCode,jdbcType=VARCHAR},
+      </if>
+      <if test="shortName != null" >
+        #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="orgType != null" >
+        #{orgType,jdbcType=VARCHAR},
+      </if>
+      <if test="orgTypeCode != null" >
+        #{orgTypeCode,jdbcType=VARCHAR},
+      </if>
       <if test="higherOrg != null" >
         #{higherOrg,jdbcType=CHAR},
       </if>
@@ -120,6 +190,33 @@
       <if test="code != null" >
         code = #{code,jdbcType=VARCHAR},
       </if>
+      <if test="province != null" >
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="provinceCode != null" >
+        province_code = #{provinceCode,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null" >
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="cityCode != null" >
+        city_code = #{cityCode,jdbcType=VARCHAR},
+      </if>
+      <if test="district != null" >
+        district = #{district,jdbcType=VARCHAR},
+      </if>
+      <if test="districtCode != null" >
+        district_code = #{districtCode,jdbcType=VARCHAR},
+      </if>
+      <if test="shortName != null" >
+        short_name = #{shortName,jdbcType=VARCHAR},
+      </if>
+      <if test="orgType != null" >
+        org_type = #{orgType,jdbcType=VARCHAR},
+      </if>
+      <if test="orgTypeCode != null" >
+        org_type_code = #{orgTypeCode,jdbcType=VARCHAR},
+      </if>
       <if test="higherOrg != null" >
         higher_org = #{higherOrg,jdbcType=CHAR},
       </if>
@@ -151,6 +248,15 @@
     update t_uap_organization
     set name = #{name,jdbcType=VARCHAR},
       code = #{code,jdbcType=VARCHAR},
+      province = #{province,jdbcType=VARCHAR},
+      province_code = #{provinceCode,jdbcType=VARCHAR},
+      city = #{city,jdbcType=VARCHAR},
+      city_code = #{cityCode,jdbcType=VARCHAR},
+      district = #{district,jdbcType=VARCHAR},
+      district_code = #{districtCode,jdbcType=VARCHAR},
+      short_name = #{shortName,jdbcType=VARCHAR},
+      org_type = #{orgType,jdbcType=VARCHAR},
+      org_type_code = #{orgTypeCode,jdbcType=VARCHAR},
       higher_org = #{higherOrg,jdbcType=CHAR},
       higher_name = #{higherName,jdbcType=VARCHAR},
       level = #{level,jdbcType=INTEGER},

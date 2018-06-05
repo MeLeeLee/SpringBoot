@@ -58,7 +58,9 @@ public class TestJob {
 				organization.setId(UUID.randomUUID().toString());
 				organization.setName(hospital.getHospitalName());
 				organization.setCode(hospital.getLocationCode()+"01");
-				organization.setHigherOrg(province+city+district);
+				organization.setProvince(province);
+				organization.setCity(city);
+				organization.setDistrict(district);
 				organization.setStatus(1);
 				organization.setCreateTime(new Date());
 				organizationMapper.insert(organization);
