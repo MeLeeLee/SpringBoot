@@ -1,0 +1,33 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.melelee.test.springboot.demo.configuration.Author",
+      "name": "author",
+      "type": "com.melelee.test.springboot.demo.configuration.Author"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.melelee.test.springboot.demo.configuration.Author",
+      "defaultValue": 0,
+      "name": "author.age",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.melelee.test.springboot.demo.configuration.Author",
+      "name": "author.email",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.melelee.test.springboot.demo.configuration.Author",
+      "name": "author.name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.melelee.test.springboot.demo.configuration.Author",
+      "name": "author.phone",
+      "type": "java.lang.String"
+    }
+  ]
+}
