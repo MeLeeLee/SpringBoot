@@ -24,11 +24,11 @@ public class User implements Serializable {
 	private Long id;
 	@Column(nullable = false, unique = true)
 	private String userName;
-	@Column(nullable = false)
+	@Column
 	private String passWord;
-	@Column(nullable = false, unique = true)
+	@Column(unique = true)
 	private String email;
-	@Column(nullable = true, unique = true)
+	@Column(unique = true)
 	private String nickName;
 	@Column(nullable = false)
 	private String regTime;

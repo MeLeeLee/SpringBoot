@@ -32,5 +32,4 @@ pagehelper:
     reasonable: true
     supportMethodsArguments: true
     params: count=countSql
-#cronExpression: 0/10 * * * * ? #每天15:56:45秒运行
-cronExpression: 30 7 11 * * ?  #每天15:56:45秒运行
+cronExpression: 0/10 * * * * ? #每天15:56:45秒运行

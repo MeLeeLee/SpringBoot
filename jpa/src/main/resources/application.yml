@@ -4,9 +4,9 @@ server:
 spring:
     datasource:
         name: test
-        url: jdbc:mysql://10.1.138.12:3306/mengll?useUnicode=true&characterEncoding=UTF-8
+        url: jdbc:mysql://45.78.57.75:3306/test?useUnicode=true&characterEncoding=UTF-8
         username: root
-        password: iflytek!
+        password: Password124
         driver-class-name: com.mysql.jdbc.Driver
     jpa:
       hibernate:
