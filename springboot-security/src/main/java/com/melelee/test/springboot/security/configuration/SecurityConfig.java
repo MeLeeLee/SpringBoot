@@ -1,4 +1,4 @@
-package com.melelee.springboot.configuration;
+package com.melelee.test.springboot.security.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

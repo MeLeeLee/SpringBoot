@@ -1,8 +1,8 @@
-package com.melelee.springboot.controller;
+package com.melelee.test.springboot.jpa.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.melelee.springboot.domain.User;
-import com.melelee.springboot.domain.UserRepository;
+import com.melelee.test.springboot.jpa.domain.User;
+import com.melelee.test.springboot.jpa.domain.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.melelee.springboot.domain;
+package com.melelee.test.springboot.jpa.domain;
 
 import lombok.Data;
 
