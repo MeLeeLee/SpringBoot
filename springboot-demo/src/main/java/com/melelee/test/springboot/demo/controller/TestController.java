@@ -41,8 +41,7 @@ public class TestController {
 		return returnAuthor;
 	}
 
-
-	@RequestMapping("/exception")
+	@PostMapping("/exception")
 	public int exception() {
 		return 1/0;
 	}
